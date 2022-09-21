@@ -1,0 +1,26 @@
+.navbox {
+  position: absolute;
+  width: 878px;
+  height: 68px;
+  left: 544px;
+  top: 47px;
+
+  background: #b7f8b6;
+  border-radius: 5px;
+}
+
+.nav {
+  position: absolute;
+  width: 76px;
+  height: 30px;
+  left: 1075px;
+  top: 66px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #007105;
+}

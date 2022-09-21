@@ -1,0 +1,26 @@
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin: 0%;
+  padding: 1%;
+  background: #b7f8b6;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nav {
+  padding: 0% 5%;
+  list-style: none;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #006105;
+}
+.logo {
+  height: 2rem;
+  width: auto;
+}
