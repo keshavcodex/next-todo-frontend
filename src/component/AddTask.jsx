@@ -55,7 +55,7 @@ function AddTask() {
           <Input onChange={(e) => onValueChange(e)} name="email" />
         </FormControl>
 
-        <FormControl style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+        <FormControl sx={{flexDirection: 'row', justifyContent: 'space-around'}}>
           <InputLabel>Choose Deadline</InputLabel>
           <Input type="date" onChange={(e) => onValueChange(e)} name="phone" />
         </FormControl>

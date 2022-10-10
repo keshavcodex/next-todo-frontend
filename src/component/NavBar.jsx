@@ -5,6 +5,7 @@ import "./NavBar.css";
 
 const Header = styled(AppBar)`
   background: #295a04;
+  justifyContent: 'space-between' ;
 `;
 const Tab = styled(NavLink)`
   font-size: 20px;
