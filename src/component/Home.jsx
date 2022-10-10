@@ -1,31 +1,24 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import "./Home.css";
 
 function Home() {
+  const [topic, setTopic] = useState("");
+
+  function handleChange(event) {
+    setTopic(event.target.value);
+  }
+
+  function handleClick(event) {
+    setTopic(event.target.value);
+    console.log(topic);
+  }
+
   return (
-    <div className="blank">
-      <span className="content">Confused about next task?</span>
-      <span className="content-small">
-        Don’t worry we are here to help you.
-      </span>
-      {/* <form className="box"> */}
-      <form action="../../post" method="post" className="box">
-        <input type="text" name="newTopic" />
-        <button
-          type="submit"
-          onSubmit={createTopic()}
-          class="btn btn-outline-success"
-          value="submit"
-        >
-          Add Topic
-        </button>
-      </form>
+    <div>
+      <h1>Unable to track your Tasks?</h1>
+      <h3>Don't worry we are here to help you...</h3>
     </div>
   );
-}
-
-function createTopic(event) {
-  console.log(event);
 }
 
 export default Home;
