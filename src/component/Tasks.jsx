@@ -49,7 +49,7 @@ function MediaControlCard(props) {
         </Button>
 
         <Button variant="contained" component="label">
-          Upload
+          Change img
           <input hidden accept="image/*" multiple type="file" />
         </Button>
       </Stack>
