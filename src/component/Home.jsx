@@ -1,25 +1,21 @@
-import { useState } from "react";
 import "./Home.css";
+import Card from "./Card";
+import Data from "../Data";
 
-function Home() {
-  const [topic, setTopic] = useState("");
-
-  function handleChange(event) {
-    setTopic(event.target.value);
-  }
-
-  function handleClick(event) {
-    setTopic(event.target.value);
-    console.log(topic);
-  }
-
+function createCard(Data) {
   return (
-    <div>
-      <h1>Unable to track your Tasks?</h1>
-      <h3>Don't worry we are here to help you...</h3>
-      <h3>Click on add Task</h3>
+    <div className="column">
+      <Card
+        key={Data.id}
+        topic={Data.topic}
+        img={Data.imgURL}
+        progress={Data.progress}
+        deadline={Data.deadline}
+      />
     </div>
   );
 }
 
-export default Home;
+export default function Home() {
+  return <div className="">{Data.map(createCard)}</div>;
+}

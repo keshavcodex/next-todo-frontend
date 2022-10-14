@@ -22,7 +22,6 @@ function NavBar() {
           <img src={logo} alt="logo" className="logo" />
         </Tab>
         <Tab to="/">Home</Tab>
-        <Tab to="/all">Tasks</Tab>
         <Tab to="/add">Add Task</Tab>
         <Tab to="/deadLines">DeadLines</Tab>
         <Tab to="/calender">calender</Tab>

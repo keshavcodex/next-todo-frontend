@@ -1,28 +1,45 @@
-/* .content {
-  padding: 1% 5%;
-  font-family: "Noto Serif";
-  font-weight: 700;
-  font-size: 53px;
-  color: #050000;
-  float: left;
-}
-.content-small {
-  padding: 1% 5.3%;
-  font-family: "Noto Serif";
-  font-weight: 300;
-  font-size: 2.5rem;
-  float: left;
-  color: #475a46;
+* {
+  box-sizing: border-box;
 }
 
-.blank {
-  margin-top: 5%;
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 100%;
+  padding: 0 30px;
 }
 
-.box {
-  margin: 2% 0%;
-  display: inline-block;
-  padding: 0.5% 0.5%;
-  border-radius: 5px;
-  border-style: groove;
-} */
+/*==================== MEDIA QUERIES ====================*/
+/******** For Smart Phone ************/
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+  }
+}
+
+/******** For Tablet ************/
+@media screen and (min-width: 768px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin: 15px 0;
+  }
+}
+/******** For Hd display laptop ************/
+@media screen and (min-width: 900px) {
+  .column {
+    width: 33%;
+    display: block;
+    margin: 15px 0;
+  }
+}
+/******** For full Hd display laptop ************/
+@media screen and (min-width: 1800px) {
+  .column {
+    width: 25%;
+    display: grid;
+    margin: 15px 0;
+  }
+}
