@@ -9,6 +9,22 @@ import {
   Button,
 } from "@mui/material";
 
+
+const CustomBtn = styled(Button)({
+  fontSize: 16,
+  padding: '6px 12px',
+  margin: '2% 25%',
+  lineHeight: 1.5,
+  backgroundColor: '#1bb089',
+  color: 'black',
+  transition: ".3s",
+  
+  '&:hover': {
+    backgroundColor: '#1bb089',
+    boxShadow: '0 8px 16px 0 rgb(1, 66, 50)',
+  },
+});
+
 const defaultValue = {
   name: "",
   username: "",
@@ -18,7 +34,7 @@ const defaultValue = {
 
 const Container = styled(FormGroup)`
   width: 33%;
-  margin: 5% auto 0;
+  margin: 1% auto 0;
   & > div {
     margin-top: 10px;
   }
@@ -44,11 +60,15 @@ function AddTask() {
           <Input onChange={(e) => onValueChange(e)} name="name" />
         </FormControl>
         <FormControl>
-          <InputLabel>Total hours required</InputLabel>
-          <Input onChange={(e) => onValueChange(e)} name="username" />
+          <InputLabel>Image Link</InputLabel>
+          <Input onChange={(e) => onValueChange(e)} name="name" />
         </FormControl>
         <FormControl>
           <InputLabel>Current Progress</InputLabel>
+          <Input onChange={(e) => onValueChange(e)} name="username" />
+        </FormControl>
+        <FormControl>
+          <InputLabel>Total required work</InputLabel>
           <Input onChange={(e) => onValueChange(e)} name="email" />
         </FormControl>
 
@@ -60,9 +80,9 @@ function AddTask() {
         </FormControl>
 
         <FormControl>
-          <Button variant="contained" onClick={() => AddTaskDetails()}>
-            Add User
-          </Button>
+          <CustomBtn onClick={() => AddTaskDetails()}>
+            Add Task
+          </CustomBtn>
         </FormControl>
       </Container>
     </div>

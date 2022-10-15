@@ -5,7 +5,9 @@ function Meter(props) {
   const bar = props.progress;
   const bg = props.color;
   return (
-    <div className="skills" style={{ background: bg, width: bar }}></div>
+    <div className="container">
+      <div className="skills" style={{ background: bg, width: bar }}></div>
+    </div>
   );
 }
 

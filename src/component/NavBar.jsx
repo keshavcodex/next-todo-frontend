@@ -17,7 +17,7 @@ const Tab = styled(NavLink)`
 function NavBar() {
   return (
     <Header position="static">
-      <Toolbar>
+      <Toolbar className="box">
         <Tab to="/">
           <img src={logo} alt="logo" className="logo" />
         </Tab>
