@@ -1,11 +1,7 @@
 import "./Footer.css";
 
 function Footer() {
-  return (
-    <div>
-      <p>Kaise ho footer</p>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Footer;
