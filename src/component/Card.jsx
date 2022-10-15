@@ -11,7 +11,10 @@ function MediaControlCard(props) {
   const { img, topic, progress, deadline} = props;
   const progressBar = progress + "%";
   const deadlineBar = deadline + "%";
-
+  var deadlineColor = "#000";
+  if(deadline > progress){
+    deadlineColor = "#ff0000";
+  }
   return (
     <div className="card">
       <Card sx={{ pb: 1.5 }}>
@@ -37,7 +40,7 @@ function MediaControlCard(props) {
             component="div"
             fontSize="medium"
           >
-            Deadline: <Meter progress={deadlineBar} color="#000"/>
+            Deadline: <Meter progress={deadlineBar} color={deadlineColor}/>
           </Typography>
         </CardContent>
 
