@@ -4,6 +4,7 @@ import NavBar from "./component/NavBar";
 import AddTask from "./component/AddTask";
 import Deadlines from "./component/Deadlines";
 import Calender from "./component/Calender";
+import Footer from "./component/Footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/deadLines" element={<Deadlines />} />
         <Route path="/calender" element={<Calender />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

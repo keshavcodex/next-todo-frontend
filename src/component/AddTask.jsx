@@ -1,10 +1,7 @@
 import { useState } from "react";
-import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
 import {
   FormControl,
   FormGroup,
-  TextField,
   InputLabel,
   Input,
   styled,
@@ -55,11 +52,13 @@ function AddTask() {
           <Input onChange={(e) => onValueChange(e)} name="email" />
         </FormControl>
 
-        <FormControl sx={{flexDirection: 'row', justifyContent: 'space-around'}}>
+        <FormControl
+          sx={{ flexDirection: "row", justifyContent: "space-around" }}
+        >
           <InputLabel>Choose Deadline</InputLabel>
           <Input type="date" onChange={(e) => onValueChange(e)} name="phone" />
         </FormControl>
-        
+
         <FormControl>
           <Button variant="contained" onClick={() => AddTaskDetails()}>
             Add User
