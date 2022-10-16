@@ -8,3 +8,8 @@
   padding-bottom: 5px; /* Add bottom padding */
   color: white; /* White text color */
 }
+
+.container {
+  width: 100%; /* Full width */
+  background-color: #dbdbdb; /* Grey background */
+}

@@ -8,11 +8,11 @@ import "./Card.css";
 import Meter from "./Meter";
 
 function MediaControlCard(props) {
-  const { img, topic, progress, deadline} = props;
+  const { img, topic, progress, deadline } = props;
   const progressBar = progress + "%";
   const deadlineBar = deadline + "%";
   var deadlineColor = "#000";
-  if(deadline > progress){
+  if (deadline > progress) {
     deadlineColor = "#ff0000";
   }
   return (
@@ -28,19 +28,11 @@ function MediaControlCard(props) {
           <Typography gutterBottom variant="h5" component="div">
             {topic}
           </Typography>
-          <Typography
-            variant="h6"
-            component="div"
-            fontSize="medium"
-          >
-            Progress: <Meter progress={progressBar} color="#1bb089"/>
+          <Typography variant="h6" component="span" fontSize="medium">
+              Progress: <Meter progress={progressBar} color="#1bb089" />
           </Typography>
-          <Typography
-            variant="h6"
-            component="div"
-            fontSize="medium"
-          >
-            Deadline: <Meter progress={deadlineBar} color={deadlineColor}/>
+          <Typography variant="h6" component="div" fontSize="medium">
+            Deadline: <Meter progress={deadlineBar} color={deadlineColor} />
           </Typography>
         </CardContent>
 
