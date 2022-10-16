@@ -8,5 +8,5 @@
 }
 .box:hover {
   background-color: #1bb089;
-  box-shadow: 0 8px 16px 0 rgb(1, 66, 50);
+  box-shadow: 0 4px 8px 0 rgb(1, 66, 50);
 }

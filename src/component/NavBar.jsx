@@ -10,7 +10,7 @@ const Header = styled(AppBar)`
 const Tab = styled(NavLink)`
   font-size: 20px;
   margin-right: 20px;
-  color: #111;
+  color: #000;
   text-decoration: none;
 `;
 
@@ -24,7 +24,7 @@ function NavBar() {
         <Tab to="/">Home</Tab>
         <Tab to="/add">Add Task</Tab>
         <Tab to="/deadLines">DeadLines</Tab>
-        <Tab to="/calender">calender</Tab>
+        <Tab to="/calender">Calender</Tab>
       </Toolbar>
     </Header>
   );
