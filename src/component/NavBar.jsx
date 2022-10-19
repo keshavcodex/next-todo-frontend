@@ -29,7 +29,7 @@ const Tab = styled(NavLink)`
 const Hamburger = styled(IconButton)`
   display: none;
   right: 0;
-  @media (max-width: 700px) {
+  @media (max-width: 600px) {
     display: block;
   }
 `;
@@ -68,10 +68,11 @@ function NavBar() {
           {!menuOpen && (
             <div className="tabs">
               {/* div below will visible only in smaller devices */}
-              <div>
+              <div >
                 <Tab to="/">
                   <img src={logo} alt="logo" className="logo" />
                 </Tab>
+                <Tab sx={{ m: 5, color:'#fff'}}>Task Tracker</Tab>
               </div>
               <Tab to="/">
                 <img src={logo} alt="logo" className="logo" />
