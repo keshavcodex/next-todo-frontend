@@ -62,6 +62,7 @@ function NavBar() {
     <Header position="static">
       <Container maxWidth="xxl" >
       <Toolbar disableGutters>
+        {!menuOpen && (
         <div className="tabs">
           <div><Tab to="/">
             <img src={logo} alt="logo" className="logo" />
@@ -74,6 +75,7 @@ function NavBar() {
           <Tab to="/deadLines">DeadLines</Tab>
           <Tab to="/calender">Calender</Tab>
         </div>
+        )}
         
 
         <nav ref={menu} className="side-nav hidden" data-side-nav="data-side-nav">
