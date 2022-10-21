@@ -1,6 +1,6 @@
 # `Have a look:`
 
-[https://classy-selkie-93e1b6.netlify.app/](TASK TRACKER)
+[TASK TRACKER](https://classy-selkie-93e1b6.netlify.app)
 
 ### `color theme`
 
