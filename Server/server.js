@@ -1,30 +1,31 @@
-const express = require('express');
-const body_parse = require('body-parser');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const { database_uri, port } = require('./config/config');
-// require('dotenv').config();
-
-const app = express();
+const express = require("express");
+const colors = require("colors");
+const body_parse = require("body-parser");
+const cors = require("cors");
+const { database_uri, port } = require("./config/config");
+const { errorHandler } = require("./middleware/errorMiddleware");
+const connectDB = require("./config/db");
 const server_port = port || 5000;
 
+connectDB();
+
+const app = express();
+
+app.use(express.json());
 app.use(cors());
 app.use(body_parse.json());
+app.use(express.urlencoded({ extended: false }));
 
-const uri = database_uri;
-mongoose.connect(uri, { useNewUrlParser: true });
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log("MongoDB database connection established successfully");
-});
-
-const tasksRouter = require('./routes/tasks');
+const tasksRouter = require("./routes/tasks");
 
 //Basic route path
-app.use('/tasks', tasksRouter);
+app.use("/tasks", tasksRouter);
+
+//To use the manual written error handler in middleware
+app.use(errorHandler);
 
 app.listen(port, () => {
-    console.log(`Server is running on port: ${server_port}`);
+  console.log(`Server is running on port: ${server_port}`);
 });
 
 //To run the server with nodemon write :- npm run start
