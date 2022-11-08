@@ -28,4 +28,4 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${server_port}`);
 });
 
-//To run the server with nodemon write :- npm run start
+//To run the server with nodemon write :- npm run server
