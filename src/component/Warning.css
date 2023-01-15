@@ -1,0 +1,14 @@
+.cnfcard {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(59, 27, 27, 0.2);
+  transition: 0.3s;
+}
+.cnfcontainer {
+    background-color: rgb(236, 236, 236);
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+h2{
+    color: rgb(0, 0, 0);
+}

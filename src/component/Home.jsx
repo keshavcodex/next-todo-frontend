@@ -2,6 +2,7 @@ import "./Home.css";
 import Card from "./Card";
 import Data from "../Data";
 
+
 function createCard(Data) {
   return (
     <div className="column">
