@@ -4,8 +4,8 @@ const data = [
     topic: "Computer Networks",
     imgURL:
       "https://cyber.olympiadsuccess.com/assets/images/cyber_square/cyber_topic_63.jpg",
-    progress: "60",
-    deadline: "50",
+    progress: "50",
+    deadline: "51",
   },
   {
     id: 2,

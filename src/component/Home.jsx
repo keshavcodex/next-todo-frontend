@@ -1,7 +1,7 @@
 import "./Home.css";
 import Card from "./Card";
 import Data from "../Data";
-
+import Warning from "./Warning";
 
 function createCard(Data) {
   return (
@@ -13,6 +13,7 @@ function createCard(Data) {
         progress={Data.progress}
         deadline={Data.deadline}
       />
+      <Warning />
     </div>
   );
 }
