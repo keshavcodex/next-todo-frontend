@@ -1,7 +1,11 @@
 .logo {
   height: 3rem;
 }
-
+.sitename{
+  display: flex-box;
+  margin: 0 30px;
+  position: relative;
+}
 .tabs {
   display: flex;
   align-items: center;
@@ -26,6 +30,11 @@
   content: "TASK TRACKER"
 }
 
+@media screen and (min-width: 600px) {
+  .sitename{
+    display: none
+  }
+}
 /***************************/
 
 .side-nav {
@@ -36,14 +45,14 @@
   transition: 200ms;
   /*background-color: var(--side-nav_bg-clr) !important;*/
   background-color: #c9ceca14;
-  min-width: 100%;
+  min-width: 80%;
   min-height: 100vh;
   z-index: 5;
 }
 .side-nav-content {
   min-width: 230px;
   max-width: 360px;
-  background-color: #30be96;
+  background-color: #bcffec;
   min-height: 100vh;
 }
 .side-nav__list {
@@ -57,7 +66,6 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
-  width: 100%;
   text-decoration: none;
   color: #333;
   font-size: 1.2rem;

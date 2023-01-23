@@ -1,23 +1,25 @@
 import "./Home.css";
-import Card from "./Card";
+import Card from "../component/Card";
 import Data from "../Data";
-import Warning from "./Warning";
 
 function createCard(Data) {
   return (
     <div className="column">
       <Card
         key={Data.id}
-        topic={Data.topic}
+        name={Data.name}
         img={Data.imgURL}
         progress={Data.progress}
         deadline={Data.deadline}
       />
-      <Warning />
     </div>
   );
 }
 
 export default function Home() {
-  return <div className="">{Data.map(createCard)}</div>;
+  return (
+    <div>
+      <div>{Data.map(createCard)}</div>
+    </div>
+  );
 }

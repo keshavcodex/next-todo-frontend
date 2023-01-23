@@ -10,7 +10,7 @@ import CloseIcon from "@mui/icons-material/Close";
 const Header = styled(AppBar)`
   background: #1bb089;
   justifycontent: "space-between";
-  transition: 0.3s;
+  transition: 0.5s;
   &:hover {
     background-color: #1bb089;
     box-shadow: 0 4px 8px 0 rgb(1, 66, 50);
@@ -28,15 +28,16 @@ const Tab = styled(NavLink)`
 
 const Hamburger = styled(IconButton)`
   display: none;
-  right: 0;
+  color: #000;
   @media (max-width: 600px) {
     display: block;
   }
+  
 `;
 
 const CloseMenuBtn = styled(IconButton)`
   padding: 1rem;
-  color: #333;
+  color: #000;
 `;
 
 function NavBar() {
@@ -61,22 +62,22 @@ function NavBar() {
   };
 
   return (
-    <Header position="static">
+    <Header position="">
       <Container maxWidth="xxl">
         <Toolbar disableGutters>
           {/* only show when menu is not open */}
           {!menuOpen && (
             <div className="tabs">
               {/* div below will visible only in smaller devices */}
-              <div >
+              <div>
                 <Tab to="/">
                   <img src={logo} alt="logo" className="logo" />
                 </Tab>
-                <Tab sx={{ m: 5, color:'#fff'}}>Task Tracker</Tab>
               </div>
               <Tab to="/">
                 <img src={logo} alt="logo" className="logo" />
               </Tab>
+              <h2 className="sitename">Task Tracker</h2>
               <Tab to="/">Home</Tab>
               <Tab to="/add">Add Task</Tab>
               <Tab to="/deadLines">DeadLines</Tab>

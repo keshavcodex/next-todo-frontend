@@ -1,4 +1,4 @@
-import Meter from "./Meter";
+import Meter from "../component/Meter";
 import data from "../Data";
 function Deadlines() {
   return (
