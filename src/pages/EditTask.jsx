@@ -49,7 +49,8 @@ function EditTask() {
 
   useEffect(() => {
     loadTaskDetails();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   const loadTaskDetails = async () => {
     const response = await getTask(id);

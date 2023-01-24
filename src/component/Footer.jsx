@@ -31,7 +31,7 @@ function Footer() {
       <div className="footer-right">
         <a
           href="https://mail.google.com/mail/u/0/#all?compose=new"
-          target="_blank"
+          target=" "
           className="home__social-icon"
         >
           <p>Contact Us: keshavcodex@gmail.com</p>
