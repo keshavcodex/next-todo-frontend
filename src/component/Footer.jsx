@@ -9,7 +9,7 @@ function Footer() {
         </h3>
         <p className="footer-links">
           <a href="#">Home</a>·<a href="https://dev.to/keshavcodex">Blog</a>·
-          <a href="#">About</a>·<a href="#">Faq</a>·
+          <a href="#">About</a>·<a href="#">FAQ</a>·
           <a href="https://keshavcodex.github.io">Contact</a>
         </p>
 
@@ -30,19 +30,12 @@ function Footer() {
 
       <div className="footer-right">
         <a
-          href="https://mail.google.com/mail/u/0/#all?compose"
+          href="https://mail.google.com/mail/u/0/#all?compose=new"
           target="_blank"
           className="home__social-icon"
         >
           <p>Contact Us: keshavcodex@gmail.com</p>
         </a>
-        {/* <form action="#" method="post">
-
-    <input type="text" name="email" placeholder="Email">
-    <textarea name="message" placeholder="Message"></textarea>
-    <button>Send</button>
-
-  </form> */}
       </div>
     </div>
   );

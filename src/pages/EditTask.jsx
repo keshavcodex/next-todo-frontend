@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AddTask.css";
-import { addTask } from "../service/api";
-import { useNavigate } from "react-router-dom";
+import { editTask, getTask } from "../service/api";
+import { useNavigate, useParams } from "react-router-dom";
+
 import {
   FormControl,
   FormGroup,
@@ -14,7 +15,7 @@ import {
 
 const CustomBtn = styled(Button)({
   fontSize: 16,
-  padding: "6px 12px",
+  pediting: "6px 12px",
   margin: "2% auto",
   lineHeight: 1.5,
   backgroundColor: "#1bb089",
@@ -41,48 +42,73 @@ const Container = styled(FormGroup)`
   }
 `;
 
-function AddTask() {
+function EditTask() {
   const [task, setTask] = useState(defaultValue);
   const navigate = useNavigate();
+  const { id } = useParams();
 
-  const onValueChange = (e) => {
-    // we are using "...task" so that new parameter gets append into it
-    var settingTask = { ...task, [e.target.name]: e.target.value };
-    if (settingTask.imgURL === "") {
-      settingTask.imgURL = "https://source.unsplash.com/random?park";
-    }
-    setTask(settingTask);
+  useEffect(() => {
+    loadTaskDetails();
+  }, []);
+
+  const loadTaskDetails = async () => {
+    const response = await getTask(id);
+    console.log(response);
+    setTask(response.data[0]);
   };
 
-  const addTaskDetails = async () => {
-    await addTask(task);
+  
+  const onValueChange = (e) => {
+    // we are using "...task" so that new parameter gets append into it
+    setTask({ ...task, [e.target.name]: e.target.value });
+  };
+
+  const editTaskDetails = async () => {
+    await editTask(task, id);
     navigate("/");
   };
 
   return (
     <Container className="fullscreen">
-      <Typography variant="h4">Add Task</Typography>
+      <Typography variant="h4">Edit Task</Typography>
       <FormControl>
         <InputLabel>Title</InputLabel>
-        <Input onChange={(e) => onValueChange(e)} name="name" />
+        <Input
+          onChange={(e) => onValueChange(e)}
+          name="name"
+          value={task.name}
+        />
       </FormControl>
       <FormControl>
         <InputLabel>Image Link</InputLabel>
-        <Input onChange={(e) => onValueChange(e)} name="imgURL" placeholder="(optional)"/>
+        <Input
+          onChange={(e) => onValueChange(e)}
+          name="imgURL"
+          value={task.imgURL}
+          placeholder="(optional)"
+        />
       </FormControl>
       <FormControl>
         <InputLabel>Current Progress</InputLabel>
-        <Input onChange={(e) => onValueChange(e)} name="progress" />
+        <Input
+          onChange={(e) => onValueChange(e)}
+          name="progress"
+          value={task.progress}
+        />
       </FormControl>
       <FormControl>
         <InputLabel>Total required work</InputLabel>
-        <Input onChange={(e) => onValueChange(e)} name="deadline" />
+        <Input
+          onChange={(e) => onValueChange(e)}
+          name="deadline"
+          value={task.deadline}
+        />
       </FormControl>
       <FormControl>
-        <CustomBtn onClick={() => addTaskDetails()}>Add Task</CustomBtn>
+        <CustomBtn onClick={() => editTaskDetails()}>Edit Task</CustomBtn>
       </FormControl>
     </Container>
   );
 }
 
-export default AddTask;
+export default EditTask;

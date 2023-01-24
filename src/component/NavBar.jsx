@@ -11,6 +11,9 @@ const Header = styled(AppBar)`
   background: #1bb089;
   justifycontent: "space-between";
   transition: 0.5s;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
   &:hover {
     background-color: #1bb089;
     box-shadow: 0 4px 8px 0 rgb(1, 66, 50);

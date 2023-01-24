@@ -1,11 +1,12 @@
 import "./App.css";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import NavBar from "./component/NavBar";
 import AddTask from "./pages/AddTask";
+import EditTask from "./pages/EditTask";
 import Deadlines from "./pages/Deadlines";
 import Calender from "./pages/Calender";
 import Footer from "./component/Footer";
-import Warning from "./component/Warning";
+import AllTasks from "./pages/AllTasks";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -16,10 +17,12 @@ function App() {
         <NavBar />
         {/* <Warning /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<AllTasks />} />
           <Route path="/add" element={<AddTask />} />
           <Route path="/deadLines" element={<Deadlines />} />
           <Route path="/calender" element={<Calender />} />
+          <Route path="/edit/:id" element={<EditTask />} />
         </Routes>
       </BrowserRouter>
       <Footer />

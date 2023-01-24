@@ -6,18 +6,10 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import "./Card.css";
 import Meter from "./Meter";
-import { Link } from "@mui/material";
-import { useState } from "react";
-// import Warning from "./Warning";
-import EditData from "../utils/EditData";
-import DeleteData from "../utils/DeleteData";
+
 
 function MediaControlCard(props) {
-  const [users, setUsers] = useState([]);
-  const [open, setOpen] = useState(false);
-  const [deleteData, setDeleteData] = useState({});
-
-  const {id, name, img, progress, deadline } = props;
+  const {name, img, progress, deadline } = props;
   const progressBar = progress + "%";
   const deadlineBar = deadline + "%";
   var deadlineColor = "#000";
@@ -25,20 +17,6 @@ function MediaControlCard(props) {
     deadlineColor = "#ff0000";
   }
 
-  // function deleteFunction(name) {
-  //   console.log(name + " has been deleted(in log only, from card page)");
-  //   DeleteUser(props);
-  // }
-  
-  function editUser(name) {
-    console.log(name + " has been edited(in log only, from card page)");
-    EditData(props);
-  }
-
-  function openDelete(props) {
-    setOpen(false);
-    setDeleteData(props.id);
-  }
   return (
     <div className="card">
       <Card sx={{ pb: 1.5 }}>
@@ -61,7 +39,6 @@ function MediaControlCard(props) {
         </CardContent>
 
         <Stack direction="row" justifyContent={"space-around"}>
-          <Link onClick={() => editUser(id)} to={"#"}>
             <Button
               sx={{ background: "#078262" }}
               variant="contained"
@@ -69,8 +46,6 @@ function MediaControlCard(props) {
             >
               Edit
             </Button>
-          </Link>
-          <Link onClick={() => openDelete(props)} to={"#"}>
             <Button
               sx={{ background: "#078262" }}
               variant="contained"
@@ -78,10 +53,8 @@ function MediaControlCard(props) {
             >
               Delete
             </Button>
-          </Link>
         </Stack>
       </Card>
-      {/* <Warning open={open} closeDialog={() => setOpen(false)} name={name} /> */}
     </div>
   );
 }

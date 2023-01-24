@@ -19,7 +19,7 @@ const data = [
     id: 10,
     name: "Ayush",
     imgURL:
-      "https://media.licdn.com/dms/image/C5603AQEzf7-f4m7OfQ/profile-displayphoto-shrink_200_200/0/1643144636907?e=1680134400&v=beta&t=kCQwisBJqGwehhroF7vzDnlLzJMV9kNOZDHyaLndk3U",
+      "https://az837918.vo.msecnd.net/publishedimages/articles/1733/en-CA/images/cover/1/free-download-this-stunning-alberta-scene-for-your-device-background-image-L-6.jpg",
     progress: "99",
     deadline: "99",
   },

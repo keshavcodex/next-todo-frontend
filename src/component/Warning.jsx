@@ -9,9 +9,9 @@ const Transition = forwardRef(function Transition(props, ref) {
   return <Fade ref={ref} {...props} />;
 });
 function Warning(open, closeDialog, title) {
-  function deleteData(){
+  // function deleteData(){
 
-  }
+  // }
   return (
     <Dialog open={open} onClose={closeDialog} TransitionComponent={Transition}>
       <DialogContent>
