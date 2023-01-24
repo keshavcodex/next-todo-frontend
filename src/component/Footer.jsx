@@ -8,8 +8,8 @@ function Footer() {
           Task <span>Tracker</span>
         </h3>
         <p className="footer-links">
-          <a href="#">Home</a>·<a href="https://dev.to/keshavcodex">Blog</a>·
-          <a href="#">About</a>·<a href="#">FAQ</a>·
+          <a href="/">Home</a>·<a href="https://dev.to/keshavcodex">Blog</a>·
+          <a href="https://keshavcodex.github.io">About</a>·<a href="/">FAQ</a>·
           <a href="https://keshavcodex.github.io">Contact</a>
         </p>
 
