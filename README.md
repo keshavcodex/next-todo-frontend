@@ -2,7 +2,7 @@
 
 #### Server is deployed on [railways](https://railway.app/)
 
-#### Here is the [source code](https://github.com/keshavcodex/task-tracker-server)
+#### Here is the server [source code](https://github.com/keshavcodex/task-tracker-server)
 
 ### `color theme:` #1bb089
 
