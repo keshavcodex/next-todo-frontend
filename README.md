@@ -1,10 +1,17 @@
-# `Have a look:` [TASK TRACKER](https://classy-selkie-93e1b6.netlify.app)
+# `Have a look:` [TASK TRACKER](https://task-tracker-z4.netlify.app)
 
-### `color theme`
+#### Server is deployed on [railways](https://railway.app/)
 
-#1bb089
+#### Here is the [source code](https://github.com/keshavcodex/task-tracker-server)
+
+### `color theme:` #1bb089
 
 ### `npm start`
 
 Runs the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Authors
+
+- [@keshavcodex](https://www.github.com/keshavcodex)
