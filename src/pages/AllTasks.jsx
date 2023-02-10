@@ -37,10 +37,10 @@ const AllTasks = () => {
   };
 
   return (
-    <div className="">
+    <>
       {tasks.map((task) => (
-        <div className="card">
           <div className="column">
+          <div className="card">
             <Card sx={{ pb: 1.5 }}>
               <CardMedia
                 height="240px"
@@ -70,6 +70,7 @@ const AllTasks = () => {
                   size="small"
                   component={Link}
                   to={`/edit/${task._id}`}
+                  className="btn"
                 >
                   Edit
                 </Button>
@@ -84,9 +85,9 @@ const AllTasks = () => {
               </Stack>
             </Card>
           </div>
-        </div>
+          </div>
       ))}
-    </div>
+    </>
   );
 };
 

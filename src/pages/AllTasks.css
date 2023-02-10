@@ -1,6 +1,14 @@
 * {
   box-sizing: border-box;
 }
+.card {
+  transition: .3s;
+  z-index: -1;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgb(1, 66, 50);
+}
 
 /* Float four columns side by side */
 .column {

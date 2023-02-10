@@ -35,7 +35,6 @@ const Hamburger = styled(IconButton)`
   @media (max-width: 600px) {
     display: block;
   }
-  
 `;
 
 const CloseMenuBtn = styled(IconButton)`
@@ -66,26 +65,26 @@ function NavBar() {
 
   return (
     <Header position="">
-      <Container maxWidth="xxl">
+      <Container maxWidth="xxl" className="box">
         <Toolbar disableGutters>
           {/* only show when menu is not open */}
           {!menuOpen && (
             <div className="tabs">
               {/* div below will visible only in smaller devices */}
               <div>
+                  <Tab to="/">
+                    <img src={logo} alt="logo" className="logo" />
+                  </Tab>
+                </div>
                 <Tab to="/">
                   <img src={logo} alt="logo" className="logo" />
                 </Tab>
+                <h2 className="sitename">Task Tracker</h2>
+                <Tab to="/">Home</Tab>
+                <Tab to="/add">Add Task</Tab>
+                <Tab to="/deadLines">DeadLines</Tab>
+                <Tab to="/calender">Calender</Tab>
               </div>
-              <Tab to="/">
-                <img src={logo} alt="logo" className="logo" />
-              </Tab>
-              <h2 className="sitename">Task Tracker</h2>
-              <Tab to="/">Home</Tab>
-              <Tab to="/add">Add Task</Tab>
-              <Tab to="/deadLines">DeadLines</Tab>
-              <Tab to="/calender">Calender</Tab>
-            </div>
           )}
           {/* side nav bar */}
           <nav

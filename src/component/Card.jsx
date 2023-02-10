@@ -10,8 +10,6 @@ import Meter from "./Meter";
 
 function MediaControlCard(props) {
   const {name, img, progress, deadline } = props;
-  const progressBar = progress + "%";
-  const deadlineBar = deadline + "%";
   var deadlineColor = "#000";
   if (deadline > progress) {
     deadlineColor = "#ff0000";

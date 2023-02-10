@@ -44,25 +44,23 @@ const Container = styled(FormGroup)`
 function AddTask() {
   const [task, setTask] = useState(defaultValue);
   const navigate = useNavigate();
-  
+
   const onValueChange = (e) => {
     // we are using "...task" so that new parameter gets append into it
     var settingTask = { ...task, [e.target.name]: e.target.value };
 
-
-    
     setTask(settingTask);
   };
 
   const addTaskDetails = async () => {
     var photo = "https://source.unsplash.com/random?" + task.name;
     if (task.imgURL === "") {
-      console.log(task.imgURL);
-        task.imgURL = photo;
+      // console.log(task.imgURL);
+      task.imgURL = photo;
     }
     await addTask(task);
     navigate("/");
-};
+  };
 
   return (
     <Container className="fullscreen">
@@ -81,11 +79,23 @@ function AddTask() {
       </FormControl>
       <FormControl>
         <InputLabel>Current Progress</InputLabel>
-        <Input onChange={(e) => onValueChange(e)} name="progress" />
+        <Input
+          onChange={(e) => onValueChange(e)}
+          name="progress"
+          type="number"
+          inputProps={{ min: 0, max: 100 }}
+          placeholder="0 to 100"
+        />
       </FormControl>
       <FormControl>
         <InputLabel>Total required work</InputLabel>
-        <Input onChange={(e) => onValueChange(e)} name="deadline" />
+        <Input
+          onChange={(e) => onValueChange(e)}
+          name="deadline"
+          type="number"
+          inputProps={{ min: 0, max: 100 }}
+          placeholder="0 to 100"
+        />
       </FormControl>
       <FormControl>
         <CustomBtn onClick={() => addTaskDetails()}>Add Task</CustomBtn>

@@ -30,7 +30,7 @@ function Footer() {
 
       <div className="footer-right">
         <a
-          href="https://mail.google.com/mail/u/0/#all?compose=new"
+          href="mailto:keshavcodex@gmail.com"
           target=" "
           className="home__social-icon"
         >
