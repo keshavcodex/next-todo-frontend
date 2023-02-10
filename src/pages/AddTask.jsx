@@ -44,20 +44,25 @@ const Container = styled(FormGroup)`
 function AddTask() {
   const [task, setTask] = useState(defaultValue);
   const navigate = useNavigate();
-
+  
   const onValueChange = (e) => {
     // we are using "...task" so that new parameter gets append into it
     var settingTask = { ...task, [e.target.name]: e.target.value };
-    if (settingTask.imgURL === "") {
-      settingTask.imgURL = "https://source.unsplash.com/random?park";
-    }
+
+
+    
     setTask(settingTask);
   };
 
   const addTaskDetails = async () => {
+    var photo = "https://source.unsplash.com/random?" + task.name;
+    if (task.imgURL === "") {
+      console.log(task.imgURL);
+        task.imgURL = photo;
+    }
     await addTask(task);
     navigate("/");
-  };
+};
 
   return (
     <Container className="fullscreen">
@@ -68,7 +73,11 @@ function AddTask() {
       </FormControl>
       <FormControl>
         <InputLabel>Image Link</InputLabel>
-        <Input onChange={(e) => onValueChange(e)} name="imgURL" placeholder="(optional)"/>
+        <Input
+          onChange={(e) => onValueChange(e)}
+          name="imgURL"
+          placeholder="(optional)"
+        />
       </FormControl>
       <FormControl>
         <InputLabel>Current Progress</InputLabel>
