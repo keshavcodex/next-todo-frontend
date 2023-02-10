@@ -9,18 +9,25 @@ import Meter from "../component/Meter";
 import { getTasks, deleteTask } from "../service/api";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Home.css";
+import "./AllTasks.css";
 
 const AllTasks = () => {
   const [tasks, setTasks] = useState([]);
-  var deadlineColor = "#000";
+  
+  const deadLineColor = (progress, deadline) => {
+    var deadColor = "#000";
+    if(deadline > progress){
+      deadColor = "#ff0000";
+    }
+    return deadColor;
+  }
+
   useEffect(() => {
     getAllTasks();
   }, []);
 
   const getAllTasks = async () => {
     let response = await getTasks();
-    // console.log(response.data);
     setTasks(response.data);
   };
 
@@ -47,10 +54,12 @@ const AllTasks = () => {
                 </Typography>
                 <Typography variant="h6" component="span" fontSize="medium">
                   Progress: <Meter progress={task.progress} color="#1bb089" />
+                  Progress: {task.progress}
                 </Typography>
                 <Typography variant="h6" component="div" fontSize="medium">
-                  Deadline:{" "}
-                  <Meter progress={task.deadline} color={deadlineColor} />
+                  Deadline:{" "} {task.deadline}
+                 
+                  <Meter progress={task.deadline} color={deadLineColor(task.progress, task.deadline)} />
                 </Typography>
               </CardContent>
 

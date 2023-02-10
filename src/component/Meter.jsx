@@ -2,7 +2,7 @@ import React from "react";
 import "./Meter.css";
 
 function Meter(props) {
-  const bar = props.progress;
+  const bar = props.progress+"%";
   const bg = props.color;
   return (
     <div className="container">

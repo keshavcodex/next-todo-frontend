@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const URL = "https://fair-tick-swimsuit.cyclic.app/";
+// const URL = "https://fair-tick-swimsuit.cyclic.app/";
+const URL = "http://localhost:8000";
 
 export const addTask = async (data) => {
   try {
