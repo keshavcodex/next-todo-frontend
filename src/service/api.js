@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "https://fair-tick-swimsuit.cyclic.app/";
+const URL = "https://lazy-tan-coral-veil.cyclic.cloud/";
 
 export const addTask = async (data) => {
   try {
